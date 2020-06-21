@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item 
+        android:id="@+id/select_more"
+        android:title="@string/addSonglist"/>
+    <item 
+        android:id="@+id/deleteSonglist"
+        android:title="@string/deleteSonglist"/>
+
+</menu>

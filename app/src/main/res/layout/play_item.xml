@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/mainbg2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <include layout="@layout/common_nav"></include>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_gravity="top"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="10dp" >-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/styleInfo"-->
+            <!--android:textColor="#ffffff" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/styleSpinner"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:popupBackground="#666666" />-->
+        <!--<Button-->
+            <!--android:id="@+id/change"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:onClick="chooseMusic"-->
+            <!--android:text="@string/chooseMusic"-->
+            <!--android:textColor="#ffffff"/>-->
+    <!--</LinearLayout>-->
+
+        <FrameLayout
+            android:id="@+id/center_frame"
+            android:layout_width="match_parent"
+            android:layout_weight="6"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <com.playhard.musicplayer.view.LrcView
+                android:id="@+id/lrcView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone"
+                android:layout_gravity="center">
+            </com.playhard.musicplayer.view.LrcView>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/picView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:contentDescription="@string/imageInfo"
+                app:riv_oval="true" />
+        </FrameLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--style="@style/textStyle"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="#0000ff"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/singer"-->
+            <!--style="@style/textStyle"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:textColor="#0000ff"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="bold" />-->
+        <ImageView
+            android:id="@+id/play_order"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/listcycle"
+            android:tint="@color/colorGray3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+        <ImageView
+            android:id="@+id/exchange"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/excahnge"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:tint="@color/colorGray3"
+            android:layout_gravity="end"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/currentTime"
+                style="@style/textStyle" />
+
+            <SeekBar
+                android:id="@+id/playProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                style="@style/textStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageButton
+                android:id="@+id/first"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="first"
+                android:src="@drawable/first"
+                tools:layout_width="match_parent" />
+
+            <ImageButton
+                android:id="@+id/pre"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="pre"
+                android:src="@drawable/pre" />
+
+            <ImageButton
+                android:id="@+id/control"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="control"
+                android:src="@drawable/pause" />
+
+            <ImageButton
+                android:id="@+id/next"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="next"
+                android:src="@drawable/next" />
+
+            <ImageButton
+                android:id="@+id/last"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="last"
+                android:src="@drawable/last" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

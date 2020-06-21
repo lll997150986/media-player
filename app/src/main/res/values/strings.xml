@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">音乐之声</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="imageInfo">图标</string>
+    <string name="setToBell">设为手机铃声</string>
+    <string name="addSonglist">新建歌单</string>
+    <string name="deleteSonglist">删除歌单</string>
+    <string name="addToPlayList">添加到播放列表</string>
+    <string name="addToHot">添加到热歌列表</string>
+    <string name="addToClassic">添加到经典列表</string>
+    <string name="deleteAll">清空播放列表</string>
+    <string name="deleteFromList">从列表中删除</string>
+    <string name="styleInfo">选择播放形式:</string>
+    <string name="chooseMusic">换歌</string>
+    <string name="createList">新建歌单</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

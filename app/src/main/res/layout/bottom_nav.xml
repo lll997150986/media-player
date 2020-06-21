@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorTran"
+    android:id="@+id/bottom_nav"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/picView"
+        android:layout_marginLeft="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:contentDescription="@string/imageInfo"
+        android:src="@color/colorBlack"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/firstBottomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack2"
+            android:textSize="18dp"
+            android:layout_gravity="center_vertical"
+            android:text="什么都没有哦~"
+            />
+        <TextView
+            android:id="@+id/secondBottomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorGray3"
+            android:text="未知 >"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/play"
+            android:layout_centerVertical="true"
+            android:tint="@color/colorred2"
+            android:backgroundTint="@color/colorred2"
+            android:layout_gravity="center_vertical|right" />
+    </LinearLayout>
+
+
+</LinearLayout>
